@@ -11,7 +11,7 @@ RQ(app)
 
 @app.route("/")
 def home():
-    return render_template('skel.html')
+    return render_template('skel.html', root=config.ROOT_URL)
 
 
 @app.route("/add", methods=['POST'])
