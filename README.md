@@ -29,3 +29,8 @@ Configuration (put your values in `local_config.py`):
  * `MPD_MUSIC_DIR`: root directory for mpd music files
  * `ROOT_URL`: defaults to `/`. Ca be used to host youtube-mpd in a sub-url (like: `http://music.lan/youtube/`). Must begin and end with a slash
  * `TIMEOUT`: time (in seconds) before a worker (converting viedos to mp3) timeouts (defaults to 10m)
+
+# Authors
+
+ * @etnarek
+ * @C4ptainCrunch
