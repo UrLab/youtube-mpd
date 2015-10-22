@@ -3,6 +3,7 @@ from flask.ext.rq import job
 import config
 import os
 import tempfile
+import shutil
 
 
 @job
@@ -18,7 +19,8 @@ def convert_and_add(url, options):
     file_path = os.path.join(output_dir, filename)
     file_destination = os.path.join(config.DESTINATION, filename)
 
-    os.rename(file_path, file_destination)
+    shutil.copy(file_path, file_destination)
+    os.unlink(file_destination)
     os.unlink(output_dir)
 
     assert config.DESTINATION.startswith(config.MPD_MUSIC_DIR)
