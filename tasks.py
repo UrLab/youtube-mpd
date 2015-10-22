@@ -20,7 +20,7 @@ def convert_and_add(url, options):
     file_destination = os.path.join(config.DESTINATION, filename)
 
     shutil.copy(file_path, file_destination)
-    os.unlink(file_destination)
+    os.unlink(file_path)
     shutil.rmtree(output_dir)
 
     assert config.DESTINATION.startswith(config.MPD_MUSIC_DIR)
