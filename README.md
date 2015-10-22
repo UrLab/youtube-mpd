@@ -6,8 +6,9 @@ This is *python3* software (future is now)
 ## How to
 
 Dependencies:
-    * `ffmpeg` or `avconv`
-    * `redis-server`
+
+ * `ffmpeg` or `avconv`
+ * `redis-server`
 
 
 Installation :
@@ -21,8 +22,9 @@ Run :
     python app.py & rqworker
 
 Configuration (put your values in `local_config.py`):
-    * `WEB_MPD_URL`: url to be redirected to on successull import
-    * `DEBUG`: speaks for itself
-    * `DESTINATION`: final destination for converted videos (must be contained within `MPD_MUSIC_DIR` and be writable)
-    * `MPD_MUSIC_DIR`: root directory for mpd music files
-    * `ROOT_URL`: defaults to `/`. Ca be used to host youtube-mpd in a sub-url (like: `http://music.lan/youtube/`). Must begin and end with a slash
+
+ * `WEB_MPD_URL`: url to be redirected to on successull import
+ * `DEBUG`: speaks for itself
+ * `DESTINATION`: final destination for converted videos (must be contained within `MPD_MUSIC_DIR` and be writable)
+ * `MPD_MUSIC_DIR`: root directory for mpd music files
+ * `ROOT_URL`: defaults to `/`. Ca be used to host youtube-mpd in a sub-url (like: `http://music.lan/youtube/`). Must begin and end with a slash
