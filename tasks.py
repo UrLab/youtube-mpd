@@ -6,7 +6,8 @@ import tempfile
 import shutil
 
 
-@job(timeout=config.TIMEOUT)
+# @job(timeout=config.TIMEOUT)
+@job
 def convert_and_add(url, options):
     name_tpl = "%(title)s.%(ext)s"
     output_dir = tempfile.mkdtemp()
