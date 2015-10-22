@@ -1,6 +1,6 @@
 # A web UI to add youtube videos and soundcloud tubes to mpd
 
-This is _python3_ software (future is now)
+This is __python3__ software (future is now)
 
 
 ## How to
