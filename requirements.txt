@@ -1,0 +1,4 @@
+flask
+ipython
+youtube-dl
+flask-rq
