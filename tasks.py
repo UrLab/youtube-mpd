@@ -25,7 +25,7 @@ def convert_and_add(url, options):
 
     assert config.DESTINATION.startswith(config.MPD_MUSIC_DIR)
 
-    relative_path = file_destination.lstrip(config.MPD_MUSIC_DIR)
+    relative_path = file_destination[len(config.MPD_MUSIC_DIR):]
     check_output(["mpc", "update", "--wait", relative_path])
 
     command = "add" if options['add'] else "insert"
