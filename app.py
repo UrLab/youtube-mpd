@@ -22,7 +22,7 @@ def submit_url():
     is_soundcloud = re.match(r'^https?://(www\.)?soundcloud.com/', url) is not None
 
     if is_soundcloud:
-        check_output(["mpc", "load", "soundcould://url/" + url])
+        check_output(["mpc", "load", "soundcloud://url/" + url])
     else:
         tasks.convert_and_add.delay(url, {'add': add})
 
