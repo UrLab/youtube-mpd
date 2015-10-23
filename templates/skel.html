@@ -1,12 +1,39 @@
 <!doctype html>
+<html>
+<head>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <title>Hello from Flask</title>
-
-
-<form method="POST" action="{{root}}add">
-    <input type="text" name="url" /><br>
-
-    <input type="radio" name="command" value="add" checked>Append<br>
-    <input type="radio" name="command" value="insert">Insert<br>
-
-    <input type="submit" value="OK" />
-</form>
+</head>
+<body>
+    <div class="container">
+        <form method="POST" action="{{root}}add">
+            <div class="form-group">
+                <label for="inputUrl">Entre l'URL</label>
+                <input class="form-control" type="text" name="url" id="inputUrl" />
+            </div>
+            <div class="row">
+                <div class="col-sm-9">
+                    <div class="btn-group" data-toggle="buttons">
+                        <label>
+                            <input type="radio" name="command" value="add">Append
+                        </label>
+                        <label>
+                            <input type="radio" name="command" value="insert">Insert
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <input class="btn btn-primary" type="submit" value="OK" />
+        </form>
+    </div>
+</body>
+</html>
