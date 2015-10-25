@@ -11,28 +11,32 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<title>Hello from Flask</title>
+<title>Youtube-mpd</title>
 </head>
 <body>
     <div class="container">
+        <h1>Youtube-mpd</h1>
         <form method="POST" action="{{root}}add">
             <div class="form-group">
                 <label for="inputUrl">Entre l'URL</label>
-                <input class="form-control" type="text" name="url" id="inputUrl" />
+                <input class="form-control" type="url" name="url" id="inputUrl" autofocus placeholder="http://"/>
             </div>
+            <p class="text-muted">PS : ça fonctionne aussi pour soudcloud et vimeo (et d'autres) :)</p>
             <div class="row">
                 <div class="col-sm-9">
                     <div class="btn-group" data-toggle="buttons">
                         <label>
-                            <input type="radio" name="command" value="add">Append
+                            <input type="radio" name="command" value="add" checked> Ajouter à la fin de la playlist
                         </label>
+                        <br>
                         <label>
-                            <input type="radio" name="command" value="insert">Insert
+                            <input type="radio" name="command" value="insert"> Insérer comme morceau suivant
                         </label>
                     </div>
                 </div>
             </div>
-            <input class="btn btn-primary" type="submit" value="OK" />
+            <br>
+            <input class="btn btn-success" type="submit" value="Convertir et ajouter" />
         </form>
     </div>
 </body>
