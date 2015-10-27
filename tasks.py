@@ -1,13 +1,13 @@
 from subprocess import check_output
-from flask.ext.rq import job
 import config
 import os
 import tempfile
 import shutil
+from rq.decorators import job
+from redis import Redis
 
 
-# @job(timeout=config.TIMEOUT)
-@job
+@job(queue='default', timeout=config.TIMEOUT, connection=Redis())
 def convert_and_add(url, options):
     name_tpl = "%(title)s.%(ext)s"
     output_dir = tempfile.mkdtemp()

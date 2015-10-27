@@ -1,12 +1,11 @@
 from flask import Flask, render_template, request, redirect
 from subprocess import check_output
-from flask.ext.rq import RQ
+
 import tasks
 import re
 import config
 
 app = Flask(__name__)
-RQ(app)
 
 
 @app.route("/")
