@@ -1,4 +1,4 @@
-WEB_MPD_URL = "http://music.lan"
+WEB_MPD_URL = "http://music.lan.urlab.be"
 DESTINATION = "/var/lib/mpd/music/azog/imported/"
 MPD_MUSIC_DIR = "/var/lib/mpd/music/"
 TIMEOUT = 10 * 60
